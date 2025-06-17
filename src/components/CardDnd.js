@@ -10,6 +10,11 @@ class CardDnd extends HTMLElement { // orientação a objetos
     render() {
         this.shadowRoot.innerHTML = `
         <style>
+        subtitle {
+                font-size: 1.2em;
+                color: #555;
+            }
+
             .card {
                 border: 1px solid #ccc;
                 border-radius: 8px;
@@ -26,6 +31,11 @@ class CardDnd extends HTMLElement { // orientação a objetos
             }
 
             .content {
+                max-width: 75%;
+                font-size: 1em;
+            }
+
+            .content2 {
                 max-width: 75%;
                 font-size: 1em;
             }
@@ -48,11 +58,6 @@ class CardDnd extends HTMLElement { // orientação a objetos
                 <h1 class="title">${this.getAttribute("title")}</h1>
                 <p class="content">${this.getAttribute("subtitle")}</p>
                 <p class="content">${this.getAttribute("description")}</p>
-                <p class="content">${this.getAttribute("properties")}</p>
-                <p class="content">${this.getAttribute("rarity")}</p>
-                <p class="content">${this.getAttribute("type")}</p>
-                <p class="content">${this.getAttribute("damagetype")}</p>
-                <p class="content">${this.getAttribute("chara")}</p>
             </div>
             <div class="image-container">
                 <img src="${this.getAttribute("image")}" alt="Noticia Image" />
